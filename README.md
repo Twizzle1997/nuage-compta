@@ -1,6 +1,8 @@
 # nuage-compta
 Brief Nuage Compta
 
+![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/main/0_IMG/Capture.PNG?raw=true)
+
 ## Sources
 * http://courty.fr/deep-learning-03-reconnaissance-de-caracteres/
 
