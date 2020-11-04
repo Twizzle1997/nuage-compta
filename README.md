@@ -7,6 +7,7 @@ Brief Nuage Compta
 
 ## Sources
 * http://courty.fr/deep-learning-03-reconnaissance-de-caracteres/
+* https://lesdieuxducode.com/blog/2019/1/prototyper-un-reseau-de-neurones-avec-keras
 
 ## Contexte du projet
 
