@@ -5,34 +5,34 @@ import random
 
 def import_fichier_train():
 
-    CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "Y", "V", "W", "X", "Y", "Z","Z_coeur_train"]
+    CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","Z_coeur_train"]
 
-    if not os.path.exists("data_set_reduit_training"):
-        os.makedirs("data_set_reduit_training")
+    if not os.path.exists("dataset_reduit_training"):
+        os.makedirs("dataset_reduit_training")
     for letter in CATEGORIES:
         i = 0
-        if not os.path.exists(f"data_set_reduit_training/{letter}"):
-            os.makedirs(f"data_set_reduit_training/{letter}")
+        if not os.path.exists(f"dataset_reduit_training/{letter}"):
+            os.makedirs(f"dataset_reduit_training/{letter}")
             for file in os.listdir(f"data/alphabet-dataset/{letter}/"):
-                shutil.copy(f"data/alphabet-dataset/{letter}/{file}", f"data_set_reduit_training/{letter}")
+                shutil.copy(f"data/alphabet-dataset/{letter}/{file}", f"dataset_reduit_training/{letter}")
                 i += 1
                 if i == 200:
                     break
 
 def import_fichier_test():
 
-    CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "Y", "V", "W", "X", "Y", "Z","Z_coeur_test"]
+    CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","Z_coeur_train"]
 
-    if not os.path.exists("data_set_reduit_test"):
-        os.makedirs("data_set_reduit_test")
+    if not os.path.exists("dataset_reduit_test"):
+        os.makedirs("dataset_reduit_test")
     for letter in CATEGORIES:
         i = 0
-        if not os.path.exists(f"data_set_reduit_test/{letter}"):
-            os.makedirs(f"data_set_reduit_test/{letter}")
+        if not os.path.exists(f"dataset_reduit_test/{letter}"):
+            os.makedirs(f"dataset_reduit_test/{letter}")
             file_list = os.listdir(f"data/alphabet-dataset/{letter}/")
             random.shuffle(file_list)
             for file in file_list:
-                shutil.copy(f"data/alphabet-dataset/{letter}/{file}", f"data_set_reduit_test/{letter}")
+                shutil.copy(f"data/alphabet-dataset/{letter}/{file}", f"dataset_reduit_test/{letter}")
                 i += 1
                 if i == 3:
                     break
