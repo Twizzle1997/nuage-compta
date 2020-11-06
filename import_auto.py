@@ -5,7 +5,7 @@ import random
 
 def import_fichier_train():
 
-    CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "Y", "V", "W", "X", "Y", "Z"]
+    CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "Y", "V", "W", "X", "Y", "Z","Z_coeur_train"]
 
     if not os.path.exists("data_set_reduit_training"):
         os.makedirs("data_set_reduit_training")
@@ -21,7 +21,7 @@ def import_fichier_train():
 
 def import_fichier_test():
 
-    CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "Y", "V", "W", "X", "Y", "Z"]
+    CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "Y", "V", "W", "X", "Y", "Z","Z_coeur_test"]
 
     if not os.path.exists("data_set_reduit_test"):
         os.makedirs("data_set_reduit_test")
