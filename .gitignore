@@ -1,4 +1,4 @@
 data
 .vscode/
-data_set_reduit_training
-data_set_reduit_test
+dataset_reduit_train
+dataset_reduit_test
