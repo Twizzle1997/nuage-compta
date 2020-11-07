@@ -7,14 +7,14 @@ def import_fichier_train():
 
     CATEGORIES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","Z_coeur_train"]
 
-    if not os.path.exists("dataset_reduit_training"):
-        os.makedirs("dataset_reduit_training")
+    if not os.path.exists("dataset_reduit_train"):
+        os.makedirs("dataset_reduit_train")
     for letter in CATEGORIES:
         i = 0
-        if not os.path.exists(f"dataset_reduit_training/{letter}"):
-            os.makedirs(f"dataset_reduit_training/{letter}")
+        if not os.path.exists(f"dataset_reduit_train/{letter}"):
+            os.makedirs(f"dataset_reduit_train/{letter}")
             for file in os.listdir(f"data/alphabet-dataset/{letter}/"):
-                shutil.copy(f"data/alphabet-dataset/{letter}/{file}", f"dataset_reduit_training/{letter}")
+                shutil.copy(f"data/alphabet-dataset/{letter}/{file}", f"dataset_reduit_train/{letter}")
                 i += 1
                 if i == 200:
                     break
