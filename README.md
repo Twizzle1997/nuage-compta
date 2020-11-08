@@ -6,6 +6,7 @@ Brief Nuage Compta
 ![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/main/0_IMG/Capture.PNG?raw=true)
 
 ## Sources
+* https://towardsdatascience.com/building-and-deploying-an-alphabet-recognition-system-7ab59654c676
 * https://note.nkmk.me/en/python-pillow-invert/
 * http://courty.fr/deep-learning-03-reconnaissance-de-caracteres/
 * https://lesdieuxducode.com/blog/2019/1/prototyper-un-reseau-de-neurones-avec-keras
