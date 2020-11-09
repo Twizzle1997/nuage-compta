@@ -3,7 +3,7 @@ Brief Nuage Compta
 
 ### Audrey Cornaire / Nicolas Campion / Thomas Cassagne
 
-![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/main/0_IMG/Capture.PNG?raw=true)
+![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/tom/assets/Capture.PNG?raw=true)
 
 ## Sources
 * https://towardsdatascience.com/building-and-deploying-an-alphabet-recognition-system-7ab59654c676
