@@ -5,6 +5,19 @@ Brief Nuage Compta
 
 ![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/tom/assets/Capture.PNG?raw=true)
 
+## Librairies
+
+* import numpy as np
+* import matplotlib.pyplot as plt
+* from keras.preprocessing.image import ImageDataGenerator
+* from keras.preprocessing import image
+* import keras
+* from keras import metrics
+* from keras.models import Sequential
+* from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Activation
+* import os
+* import pickle
+
 ## Sources
 
 * https://towardsdatascience.com/building-and-deploying-an-alphabet-recognition-system-7ab59654c676
