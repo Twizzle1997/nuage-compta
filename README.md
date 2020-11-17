@@ -17,6 +17,7 @@ Brief Nuage Compta
 * from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Activation
 * import os
 * import pickle
+* import cv2
 
 ## Sources
 
@@ -25,6 +26,7 @@ Brief Nuage Compta
 * http://courty.fr/deep-learning-03-reconnaissance-de-caracteres/
 * https://lesdieuxducode.com/blog/2019/1/prototyper-un-reseau-de-neurones-avec-keras
 * http://www.python-simple.com/python-opencv/lecture-sauvegarde-image.php
+* https://stackoverrun.com/fr/q/12647967 
 
 ## Contexte du projet
 

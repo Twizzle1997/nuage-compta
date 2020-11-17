@@ -8,9 +8,3 @@ def negatif(img_entree, img_sortie):
     img_negatif = cv2.bitwise_not(img)
     cv2.imwrite(img_sortie, img_negatif)               # sauvegarde l'image dans le fichier donné, et avec le format indiqué par l'extension.
 
-
-
-
-### TEST 
-
-# negatif("../assets/imagedentrainement.jpeg", "../assets/imagedentrainement_sortie.jpeg")
