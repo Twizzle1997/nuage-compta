@@ -21,6 +21,7 @@ Brief Nuage Compta
 
 ## Sources
 
+* https://github.com/murtazahassan/OpenCV-Python-Tutorials-and-Projects/blob/master/Intermediate/RealTime_Shape_Detection_Contours.py
 * https://towardsdatascience.com/building-and-deploying-an-alphabet-recognition-system-7ab59654c676
 * https://note.nkmk.me/en/python-pillow-invert/
 * http://courty.fr/deep-learning-03-reconnaissance-de-caracteres/
