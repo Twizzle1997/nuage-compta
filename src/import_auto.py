@@ -13,7 +13,9 @@ def import_fichier_train():
         i = 0
         if not os.path.exists(f"data/dataset_reduit_train/{letter}"):
             os.makedirs(f"data/dataset_reduit_train/{letter}")
-            for file in os.listdir(f"data/alphabet-dataset/{letter}/"):
+            file_list = os.listdir(f"data/alphabet-dataset/{letter}/")
+            random.shuffle(file_list)
+            for file in file_list:
                 shutil.copy(f"data/alphabet-dataset/{letter}/{file}", f"data/dataset_reduit_train/{letter}")
                 i += 1
                 if i == 200:
@@ -34,5 +36,5 @@ def import_fichier_test():
             for file in file_list:
                 shutil.copy(f"data/alphabet-dataset/{letter}/{file}", f"data/dataset_reduit_test/{letter}")
                 i += 1
-                if i == 3:
+                if i == 40:
                     break
