@@ -13,11 +13,15 @@ Brief Nuage Compta
 * from keras.preprocessing import image
 * import keras
 * from keras import metrics
-* from keras.models import Sequential
+* from keras.models import Sequential, load_model
 * from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Activation
 * import os
 * import pickle
 * import cv2
+* import imutils
+* from imutils.contours import sort_contours
+
+* from src import fonctions
 
 ## Sources
 
@@ -44,3 +48,4 @@ Vous utiliserez les frameworks de Deep Learning Keras et/ou Tensorflow pour entr
 Pour entrainer votre modèle, vous pouvez vous aider du jeu de données fourni et entrainer votre modèle a reconnaitre les lettres de l'alphabet.
 
 Attention, le deep learning peut vite venir à bout des machines. Bien procéder par étape afin de comprendre le fonctionnement et la construction d'un modèle grâce au deep learning.
+
