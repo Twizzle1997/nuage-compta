@@ -136,7 +136,7 @@ Modèle enregistré!
 
 Après avoir chargé notre image reference (dans le dossier "assets") ainsi que notre modèle ici : model.h5
 
-![Screenshot]()
+![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/develop/assets/imagedentrainement.jpeg?raw=true)
 
 Nous appliquons une série de filtre sur notre image "FORMATION DATA IA ♡"
 
