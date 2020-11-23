@@ -49,12 +49,12 @@ La création de notre modèle se trouve dans le fichier ```creation_modele.ipynb
 ```epoche```- Nombre d'epochs pour l'entraînement  
 ```img_size``` - Taille standard des images  
 ```input_shape```- Format des lettres  
-
-Nous avons décidé d'importer 200 images pour la phase de d'entrainement et 60 images pour la phase de test d'entrainement de notre modèle grâce aux fonctions : 
+  
+Nous avons décidé d'importer 200 images pour la phase de d'entrainement et 60 images pour la phase de tests de notre modèle grâce aux fonctions : 
 * ```import_fichier_train```
 * ```import_fichier_test```
 
-Ensuite, nous avons "dessiné" notre modèle en commencant par lui soumettre les donées de base : target size, batch size, class mode et color mode.
+Ensuite, nous avons créé nos jeux de données en précisant les informations de base : target size, batch size, class mode et color mode.
 
 ```PYTHON
 
