@@ -50,11 +50,9 @@ La création de notre modèle se trouve dans le fichier ```creation_modele.ipynb
 ```img_size``` - Taille standard des images  
 ```input_shape```- Format des lettres  
   
-Nous avons décidé d'importer 200 images pour la phase de d'entrainement et 60 images pour la phase de tests de notre modèle grâce aux fonctions : 
-* ```import_fichier_train```
-* ```import_fichier_test```
+Nous avons décidé d'importer 200 images pour la phase de d'entrainement et 60 images pour la phase de tests de notre modèle par l'utilisation des fonctions ```import_fichier_train``` et ```import_fichier_test```.
 
-Ensuite, nous avons créé nos jeux de données en précisant les informations de base : target size, batch size, class mode et color mode.
+Ensuite, nous avons créé nos jeux de données en précisant les informations de base : **target size**, **batch size**, **class mode** et **color mode**.
 
 ```PYTHON
 
@@ -72,8 +70,10 @@ train_generator = train_datagen.flow_from_directory(
 )
 ```
 Notre modèle trouve :
+```
 Found 5207 images belonging to 27 classes.
 Found 1567 images belonging to 27 classes.
+```
 27 classes car nous avons ajouté des images de coeur (fait par nos soins via photoshop) afin d'ajouter ce caractère à notre future analyse.
 
 En partant d'un modèle sequentiel nous avons defini et attribué des séries de filtres que nous avons répétés deux fois afin d'être le plus performant possible.
