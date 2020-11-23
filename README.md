@@ -6,7 +6,7 @@ Brief Nuage Compta
 ![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/tom/assets/Capture.PNG?raw=true)
 
 ## Librairies principales
-*Un fichier environment à été généré afin d'installer le bon environnement ainsi que TOUTES les librairies necessaires*
+*Un fichier ```environment.txt``` a été généré afin d'installer le bon environnement ainsi que TOUTES les librairies necessaires*
 
 * import numpy as np
 * import matplotlib
@@ -33,7 +33,7 @@ Brief Nuage Compta
 
 La société Nuage est une société éditrice d'un logiciel spécialisé dans la gestion de la comptabilité pour les entreprises de toutes tailles : Nuage Compta.
 
-Suite a un sondage auprès de ses clients sur les principales améliorations qu'ils souhaitaient voir intégrer dans le logiciel, la société souhaite développer un modèle de reconnaisance de texte appliqué aux factures de ses clients. Le but de ce modèle serait les aider dans la saisie comptable des pièces de type facture.
+Suite a un sondage auprès de ses clients sur les principales améliorations qu'ils souhaitaient voir intégrer dans le logiciel, la société souhaite développer un modèle de reconnaisance de texte appliqué aux factures de ses clients. Le but de ce modèle serait de les aider dans la saisie comptable des pièces de type facture.
 
 La société ne possède pas les ressources nécessaires pour développer un tel module et vous sollicite afin de l'aider à créer ce système.
 
@@ -47,11 +47,22 @@ Attention, le deep learning peut vite venir à bout des machines. Bien procéder
 
 ## 1. La création du modèle
 
-La création de notre modèle se trouve dans le fichier creation_modele.ipynb
+La création de notre modèle se trouve dans le fichier ```creation_modele.ipynb```
+
+### Paramètres de l'application
+```DATA_ROOT``` - dossier racine des données utilisées  
+```MODELE_PATH``` - Chemin vers le modèle entraîné  
+```TRAINING_PATH``` - Chemin vers le dataset d'entraînement  
+```TESTING_PATH``` - Chemin vers le dataset de test
+```batch_size``` - Taille des paquets
+```num_classes``` - Nombre de classes sur lequelles entraîner le modèle
+```epoche```- Nombre d'epochs pour l'entraînement
+```img_size``` - Taille standard des images
+```input_shape```- Format des lettres
 
 Nous avons décidé d'importer 200 images pour la phase de d'entrainement et 60 images pour la phase de test d'entrainement de notre modèle grâce aux fonctions : 
-* import_fichier_train
-* import_fichier_test
+* ```import_fichier_train```
+* ```import_fichier_test```
 
 Ensuite, nous avons "dessiné" notre modèle en commencant par lui soumettre les donées de base :
 
