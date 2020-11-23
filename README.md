@@ -8,14 +8,15 @@ Brief Nuage Compta
 ## Librairies principales
 *Un fichier ```environment.txt``` a été généré afin d'installer le bon environnement ainsi que TOUTES les librairies necessaires*
 
-* import numpy as np
-* import matplotlib
-* from keras
-* import os
-* import pickle
-* import cv2
-* import imutils
-
+```
+import numpy as np
+import matplotlib
+from keras
+import os
+import pickle
+import cv2
+import imutils
+```
 
 
 
