@@ -1,28 +1,26 @@
+# nuage-compta
+Brief Nuage Compta
 
-# twitter-groupe3
-Realization of the Nuage Compta et la facture s'analysa brief  </br>
-![](/mainpage.PNG)
+### Audrey Cornaire / Nicolas Campion / Thomas Cassagne
 
-### Installation
-- pip install requirements.txt
+![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/main/0_IMG/Capture.PNG?raw=true)
 
-### Project structure
+## Sources
+* http://courty.fr/deep-learning-03-reconnaissance-de-caracteres/
+* https://lesdieuxducode.com/blog/2019/1/prototyper-un-reseau-de-neurones-avec-keras
 
-**/assets**
-- resources.py: contains the key authentication of Azure API and Tweet API
+## Contexte du projet
 
-**/data**
-- /alphabet-dataset : contains all pictures required to proceed ocr reader data learning
-- /dataset_reduit_test : folder planned to contain sorted pictures from alphabet-dataset folder for test training
-- /dataset_reduit_train : folder planned to contain sorted pictures from alphabet-dataset folder for learning
+La société Nuage est une société éditrice d'un logiciel spécialisé dans la gestion de la comptabilité pour les entreprises de toutes tailles : Nuage Compta.
 
-**/src**
-- import_auto : collect pictures from alphabet-dataset folder to dataset_reduit_test and dataset_reduit_train floders for training
+Suite a un sondage auprès de ses clients sur les principales améliorations qu'ils souhaitaient voir intégrer dans le logiciel, la société souhaite développer un modèle de reconnaisance de texte appliqué aux factures de ses clients. Le but de ce modèle serait les aider dans la saisie comptable des pièces de type facture.
 
+La société ne possède pas les ressources nécessaires pour développer un tel module et vous sollicite afin de l'aider à créer ce système.
 
-### Launch
-- main.ipynb
+## Les contraintes
 
+Vous utiliserez les frameworks de Deep Learning Keras et/ou Tensorflow pour entrainer votre modèle.
 
-### Credit
-This work is a collaboration of Audrey, Nicolas Campion and Thomas
+Pour entrainer votre modèle, vous pouvez vous aider du jeu de données fourni et entrainer votre modèle a reconnaitre les lettres de l'alphabet.
+
+Attention, le deep learning peut vite venir à bout des machines. Bien procéder par étape afin de comprendre le fonctionnement et la construction d'un modèle grâce au deep learning.
