@@ -75,7 +75,7 @@ train_generator = train_datagen.flow_from_directory(
     color_mode = "grayscale"  
     
 ```
-Notre moèle trouve :
+Notre modèle trouve :
 Found 5207 images belonging to 27 classes.
 Found 1567 images belonging to 27 classes.
 27 classes car nous avons ajoutés des images de coeur (fait par nos soins via photoshop) afin d'ajouter ce caractère à notre futur analyse.
