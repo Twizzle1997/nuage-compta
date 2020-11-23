@@ -19,17 +19,6 @@ import imutils
 ```
 
 
-
-## Sources
-
-* https://github.com/murtazahassan/OpenCV-Python-Tutorials-and-Projects/blob/master/Intermediate/RealTime_Shape_Detection_Contours.py
-* https://towardsdatascience.com/building-and-deploying-an-alphabet-recognition-system-7ab59654c676
-* https://note.nkmk.me/en/python-pillow-invert/
-* http://courty.fr/deep-learning-03-reconnaissance-de-caracteres/
-* https://lesdieuxducode.com/blog/2019/1/prototyper-un-reseau-de-neurones-avec-keras
-* http://www.python-simple.com/python-opencv/lecture-sauvegarde-image.php
-* https://stackoverrun.com/fr/q/12647967 
-
 ## Contexte du projet
 
 La société Nuage est une société éditrice d'un logiciel spécialisé dans la gestion de la comptabilité pour les entreprises de toutes tailles : Nuage Compta.
@@ -76,23 +65,23 @@ Ensuite, nous avons "dessiné" notre modèle en commencant par lui soumettre les
 
 train_generator = train_datagen.flow_from_directory(
     ### Choix de mon repertoire ###
-    directory = "data/dataset_reduit_train",
+    directory = TRAINING_PATH,
     ### Je converti les images de leur taille d'origine à notre target_size ###                    
-    target_size = (28,28),
+    target_size = (img_size,img_size),
     ### Nombre batch_size qui fait référence au nombre d'exemples d'entraînement utilisés dans une itération ###                                      
-    batch_size = 32,
+    batch_size = batch_size,
     ### Je definis le class_mode sur "catégorical" indiquant que nous avons plusieurs classes (a à z) à prédire ###          
     class_mode = "categorical",
     ### Je choisis le color_mode "grayscale", indiquant que nous trvaillons sur une image en noir et blanc
-    color_mode = "grayscale"  
-    
+    color_mode = "grayscale"                                
+)
 ```
 Notre modèle trouve :
 Found 5207 images belonging to 27 classes.
 Found 1567 images belonging to 27 classes.
-27 classes car nous avons ajoutés des images de coeur (fait par nos soins via photoshop) afin d'ajouter ce caractère à notre futur analyse.
+27 classes car nous avons ajouté des images de coeur (fait par nos soins via photoshop) afin d'ajouter ce caractère à notre future analyse.
 
-En partant d'un modèle sequentiel nous avons definis et attribué des séries de filtres que nous avons répétés deux fois afin d'être le plus performant possible.
+En partant d'un modèle sequentiel nous avons defini et attribué des séries de filtres que nous avons répétés deux fois afin d'être le plus performant possible.
 
 ```PYTHON
 model = Sequential()
@@ -119,22 +108,22 @@ model.summary()
 
 ## 2. L'entrainement et enregistrement du modèle
 
-En definissant un nombre d'epoch et d'étape par epoch assez élevées (ici *2 par rapport à la source) nous arrivons à un modèle qui possède une "fiabilité" de presque 91 %
+En definissant un nombre d'epoch *(cf. paramètres)* et d'étapes par epoch assez élevées (ici *2 par rapport à la source) nous arrivons à un modèle qui possède une "fiabilité" de presque 91 %
 
 ```PYTHON
 entrainement = model.fit_generator(
     train_generator,
-    steps_per_epoch = 32,
-    epochs = 35,
+    steps_per_epoch = batch_size,
+    epochs = epochs,
     validation_data = test_generator,
-    validation_steps = 32
+    validation_steps = batch_size
 )
 
 score = model.evaluate(train_generator, verbose=0)
 print("Test de perte:", score[0])
 print("Test de précision:", score[1])
 print("Enregistrement du modèle...")
-model.save("data/model.h5")
+model.save(MODELE_PATH)
 print("Modèle enregistré!")
 ```
 
@@ -146,11 +135,11 @@ Modèle enregistré!
 
 ## 3. Le test du modèle
 
-Après avoir chargé notre image reference (dans le dossier "assets") ainsi que notre modèle ici : model.h5
+Après avoir chargé notre image de reference ```assets\imagedentrainement.jpeg``` ainsi que notre modèle ```model.h5```
 
 ![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/develop/assets/imagedentrainement.jpeg?raw=true)
 
-Nous appliquons une série de filtre sur notre image "FORMATION DATA IA ♡"
+Nous appliquons une série de filtres sur notre image "FORMATION DATA IA ♡"
 
 ```PYTHON
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -200,10 +189,16 @@ for c in cnts:
 plt.imshow(image)
 ```
 
-![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/develop/assets/Captulre.PNG?raw=true)
+![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/develop/assets/Captulre.PNG?raw=true)  
 
 
+## Sources
 
-
-
+* https://github.com/murtazahassan/OpenCV-Python-Tutorials-and-Projects/blob/master/Intermediate/RealTime_Shape_Detection_Contours.py
+* https://towardsdatascience.com/building-and-deploying-an-alphabet-recognition-system-7ab59654c676
+* https://note.nkmk.me/en/python-pillow-invert/
+* http://courty.fr/deep-learning-03-reconnaissance-de-caracteres/
+* https://lesdieuxducode.com/blog/2019/1/prototyper-un-reseau-de-neurones-avec-keras
+* http://www.python-simple.com/python-opencv/lecture-sauvegarde-image.php
+* https://stackoverrun.com/fr/q/12647967 
 
