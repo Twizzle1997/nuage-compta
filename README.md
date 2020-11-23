@@ -43,23 +43,18 @@ La création de notre modèle se trouve dans le fichier ```creation_modele.ipynb
 ```DATA_ROOT``` - dossier racine des données utilisées  
 ```MODELE_PATH``` - Chemin vers le modèle entraîné  
 ```TRAINING_PATH``` - Chemin vers le dataset d'entraînement  
-```TESTING_PATH``` - Chemin vers le dataset de test
-```batch_size``` - Taille des paquets
-```num_classes``` - Nombre de classes sur lequelles entraîner le modèle
-```epoche```- Nombre d'epochs pour l'entraînement
-```img_size``` - Taille standard des images
-```input_shape```- Format des lettres
+```TESTING_PATH``` - Chemin vers le dataset de test  
+```batch_size``` - Taille des paquets  
+```num_classes``` - Nombre de classes sur lequelles entraîner le modèle  
+```epoche```- Nombre d'epochs pour l'entraînement  
+```img_size``` - Taille standard des images  
+```input_shape```- Format des lettres  
 
 Nous avons décidé d'importer 200 images pour la phase de d'entrainement et 60 images pour la phase de test d'entrainement de notre modèle grâce aux fonctions : 
 * ```import_fichier_train```
 * ```import_fichier_test```
 
-Ensuite, nous avons "dessiné" notre modèle en commencant par lui soumettre les donées de base :
-
-* target size
-* batch size
-* class mode
-* color mode
+Ensuite, nous avons "dessiné" notre modèle en commencant par lui soumettre les donées de base : target size, batch size, class mode et color mode.
 
 ```PYTHON
 
@@ -135,6 +130,7 @@ Modèle enregistré!
 
 ## 3. Le test du modèle
 
+*La phase de test se trouve dans le fichier ```test_modele.ipynb```*
 Après avoir chargé notre image de reference ```assets\imagedentrainement.jpeg``` ainsi que notre modèle ```model.h5```
 
 ![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/develop/assets/imagedentrainement.jpeg?raw=true)
@@ -152,7 +148,7 @@ cnts = imutils.grab_contours(cnts)
 cnts = sort_contours(cnts, method="left-to-right")[0]
 ```
 
-Viennent ensuite la détection des ROI (region of interest) encapsulé dans une boucle for afin de parcourir chaqu'une de nos lettres présentes dans notre image de référence
+Nous détectons les ROI (region of interest) dans une boucle *for* afin de parcourir chacune des lettres présentes dans notre image de référence.
 
 ```PYTHON
 ### Détection des ROI ###
