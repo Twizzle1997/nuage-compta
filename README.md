@@ -132,7 +132,7 @@ Enregistrement du modèle...
 Modèle enregistré!
 
 
-## 2. Le test du modèle
+## 3. Le test du modèle
 
 Après avoir chargé notre image reference (dans le dossier "assets") ainsi que notre modèle ici : model.h5
 
