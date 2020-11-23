@@ -187,7 +187,7 @@ for c in cnts:
 plt.imshow(image)
 ```
 
-![Screenshot]()
+![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/develop/assets/Captulre.PNG?raw=true)
 
 
 
