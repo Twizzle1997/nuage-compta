@@ -182,6 +182,7 @@ for c in cnts:
         chars.append((padded, (x, y, w, h)))
 
 ```
+![Screenshot](https://github.com/Twizzle1997/nuage-compta/blob/develop/assets/Capture.PNG?raw=true)
 
 ```PYTHON
 plt.imshow(image)
